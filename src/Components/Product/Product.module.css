@@ -1,0 +1,28 @@
+.actionSection {
+  display: flex;
+}
+
+.productCard {
+  display: flex;
+  border-radius: 1em;
+  max-width: 15em;
+  max-width: 15em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f7ff;
+  padding: 1em 0.5em;
+}
+
+.productName {
+  font-weight: 700;
+}
+
+.productPrice {
+  color: #929292;
+}
+
+.icon {
+  padding: 0em 0.2em;
+  color: blue;
+}
