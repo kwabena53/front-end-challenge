@@ -1,11 +1,11 @@
 import "./App.css";
-import ProductForm from "./Components/ProductForm/ProductForm";
+import ProductListPage from "./Pages/ProductListPage/ProductListPage";
 // import AddProductPage from "./Pages/AddProductPage/AddProductPage";
 
 function App() {
   return (
     <div className="App">
-      <ProductForm title="Add Product" _price="3" _productName="Egma" />
+      <ProductListPage />
     </div>
   );
 }

@@ -5,8 +5,8 @@
 .productCard {
   display: flex;
   border-radius: 1em;
-  max-width: 15em;
-  max-width: 15em;
+  width: 15em;
+  margin-left: 1em;
   flex-direction: column;
   justify-content: center;
   align-items: center;

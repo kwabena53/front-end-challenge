@@ -2,67 +2,63 @@
 
 exports[`matches product form snapshot 1`] = `
 <div
-  className="container"
+  className="col col-sm-12 col-md-4 col-lg-4"
 >
   <div
-    className="col col-sm-12 col-md-4 col-lg-4"
+    className="card"
   >
     <div
-      className="card"
+      className="card-header"
+      style={null}
+    >
+      <h3
+        className="card-title"
+      >
+        edit product
+      </h3>
+    </div>
+    <div
+      className="card-body"
     >
       <div
-        className="card-header"
-        style={null}
+        className="form-group"
       >
-        <h3
-          className="card-title"
+        <label
+          className="form-label"
         >
-          edit product
-        </h3>
+          Product Name
+        </label>
+        <input
+          className="form-control"
+          name="prodName"
+          onChange={[Function]}
+          placeholder="Enter product name"
+          type="text"
+          value="Product Name"
+        />
       </div>
       <div
-        className="card-body"
+        className="form-group"
       >
-        <div
-          className="form-group"
+        <label
+          className="form-label"
         >
-          <label
-            className="form-label"
-          >
-            Product Name
-          </label>
-          <input
-            className="form-control"
-            name="prodName"
-            onChange={[Function]}
-            placeholder="Enter product name"
-            type="text"
-            value="Product Name"
-          />
-        </div>
-        <div
-          className="form-group"
-        >
-          <label
-            className="form-label"
-          >
-            Price
-          </label>
-          <input
-            className="form-control"
-            name="prodPrice"
-            onChange={[Function]}
-            placeholder="Enter product latest price"
-            type="text"
-            value="Price"
-          />
-        </div>
-        <button
-          className="btn btn-primary"
-        >
-          save
-        </button>
+          Price
+        </label>
+        <input
+          className="form-control"
+          name="prodPrice"
+          onChange={[Function]}
+          placeholder="Enter product latest price"
+          type="text"
+          value="Price"
+        />
       </div>
+      <button
+        className="btn btn-primary"
+      >
+        save
+      </button>
     </div>
   </div>
 </div>
@@ -70,65 +66,61 @@ exports[`matches product form snapshot 1`] = `
 
 exports[`matches product form snapshot: add product 1`] = `
 <div
-  className="container"
+  className="col col-sm-12 col-md-4 col-lg-4"
 >
   <div
-    className="col col-sm-12 col-md-4 col-lg-4"
+    className="card"
   >
     <div
-      className="card"
+      className="card-header"
+      style={null}
+    >
+      <h3
+        className="card-title"
+      >
+        add product
+      </h3>
+    </div>
+    <div
+      className="card-body"
     >
       <div
-        className="card-header"
-        style={null}
+        className="form-group"
       >
-        <h3
-          className="card-title"
+        <label
+          className="form-label"
         >
-          add product
-        </h3>
+          Product Name
+        </label>
+        <input
+          className="form-control"
+          name="prodName"
+          onChange={[Function]}
+          placeholder="Enter product name"
+          type="text"
+        />
       </div>
       <div
-        className="card-body"
+        className="form-group"
       >
-        <div
-          className="form-group"
+        <label
+          className="form-label"
         >
-          <label
-            className="form-label"
-          >
-            Product Name
-          </label>
-          <input
-            className="form-control"
-            name="prodName"
-            onChange={[Function]}
-            placeholder="Enter product name"
-            type="text"
-          />
-        </div>
-        <div
-          className="form-group"
-        >
-          <label
-            className="form-label"
-          >
-            Price
-          </label>
-          <input
-            className="form-control"
-            name="prodPrice"
-            onChange={[Function]}
-            placeholder="Enter product latest price"
-            type="text"
-          />
-        </div>
-        <button
-          className="btn btn-primary"
-        >
-          submit
-        </button>
+          Price
+        </label>
+        <input
+          className="form-control"
+          name="prodPrice"
+          onChange={[Function]}
+          placeholder="Enter product latest price"
+          type="text"
+        />
       </div>
+      <button
+        className="btn btn-primary"
+      >
+        submit
+      </button>
     </div>
   </div>
 </div>
