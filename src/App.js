@@ -1,12 +1,23 @@
 import "./App.css";
 // import ProductForm from "./Components/ProductForm/ProductForm";
 import AddProductPage from "./Pages/AddProductPage/AddProductPage";
+import ProductListPage from "./Pages/ProductListPage/ProductListPage";
+import EditProductPage from "./Pages/EditProductPage/EditProductPage";
+
+import Menu from "./Components/Menu/Menu";
+import GlobalStyles from "./style/Global.module.css";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <AddProductPage title="Add Product" _price="3" _productName="Egma" />
-    </div>
+    <Router>
+      <div className={GlobalStyles.content}>
+        <Menu />
+        <Route path="/" exact component={ProductListPage} />
+        <Route path="/add-product" component={AddProductPage} />
+        <Route path="/edit-product/:id" component={EditProductPage} />
+      </div>
+    </Router>
   );
 }
 

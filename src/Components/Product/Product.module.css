@@ -10,8 +10,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f2f7ff;
+  background-color: #ffffff;
   padding: 1em 0.5em;
+  margin-top: 1em;
 }
 
 .productName {
