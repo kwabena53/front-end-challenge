@@ -4,12 +4,13 @@ import { Link } from "react-router-dom";
 const Menu = () => {
   return (
     <Nav>
-      <Link to={"/"}>
-        <Nav.Item>Products</Nav.Item>
-      </Link>
-      <Link to={"/add-product"}>
-        <Nav.Item>Add Product</Nav.Item>
-      </Link>
+      <Nav.Item>
+        <Link to={"/"}>Products</Link>
+      </Nav.Item>
+
+      <Nav.Item>
+        <Link to={"/add-product"}>Add Product</Link>
+      </Nav.Item>
     </Nav>
   );
 };
