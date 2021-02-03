@@ -19,7 +19,6 @@ export const getProducts = () => {
         type: RECEIVE_PRODUCTS,
         products,
       });
-
       dispatch({ type: GET_PRODUCTS_SUCCESS });
     } catch (error) {
       dispatch({ type: GET_PRODUCTS_ERROR });

@@ -2,16 +2,9 @@ import React, { useEffect } from "react";
 import Product from "../../Components/Product/Product";
 import { Grid } from "tabler-react";
 import GlobalStyles from "../../style/Global.module.css";
-import { useSelector, useDispatch } from "react-redux";
-import { getProducts } from "./duck/actions";
+import { useSelector } from "react-redux";
 
 const ProductListPage = () => {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getProducts());
-  }, []);
-
   const products = useSelector((state) => state.products);
 
   const getLatestPrice = (prodPrices, price) => {
