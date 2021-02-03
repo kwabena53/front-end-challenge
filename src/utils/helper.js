@@ -12,3 +12,13 @@ export const normalizeProductsData = (originalData) => {
 
   return normalizedData;
 };
+
+export const generateID = () => {
+  return Math.floor(Math.random() * 100);
+};
+
+export const getNextAutoIncrementID = (object) => {
+  const arr = Object.keys(object);
+  const lastId = arr[arr.length - 1];
+  return parseInt(lastId) + 1;
+};
