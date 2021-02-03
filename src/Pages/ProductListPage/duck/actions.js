@@ -5,6 +5,9 @@ export const RECEIVE_PRODUCTS = "RECEIVE_PRODUCTS";
 export const GET_PRODUCTS_REQUEST = "GET_PRODUCTS_REQUEST";
 export const GET_PRODUCTS_SUCCESS = "GET_PRODUCTS_SUCCESS";
 export const GET_PRODUCTS_ERROR = "GET_PRODUCTS_ERROR";
+export const REQUEST_TO_ADD_PRODUCT = "REQUEST_TO_ADD_PRODUCT";
+export const ADD_PRODUCT = "ADD_PRODUCT";
+export const ADD_PRODUCT_SUCCESS = "ADD_PRODUCT_SUCCESS";
 
 export const getProducts = () => {
   return async (dispatch) => {
@@ -21,5 +24,13 @@ export const getProducts = () => {
     } catch (error) {
       dispatch({ type: GET_PRODUCTS_ERROR });
     }
+  };
+};
+
+export const addProduct = (productName, price) => {
+  return {
+    type: ADD_PRODUCT,
+    productName,
+    price,
   };
 };

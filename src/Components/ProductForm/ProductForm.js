@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import addProduct from "../../Pages/AddProductPage/duck/actions";
 
 import "tabler-react/dist/Tabler.css";
 import { Grid, Form, Card, Button } from "tabler-react";
@@ -24,7 +25,7 @@ const ProductForm = ({ title, _productName, _price }) => {
     <Grid.Col lg={4} md={4} sm={12}>
       <Card styles={{ width: "300px" }}>
         <Card.Header>
-          <Card.Title>{title}</Card.Title>
+          <Card.Title>{title} Product</Card.Title>
         </Card.Header>
         <Card.Body>
           <Form.Group label="Product Name">

@@ -15,6 +15,7 @@ exports[`matches product form snapshot 1`] = `
         className="card-title"
       >
         edit product
+         Product
       </h3>
     </div>
     <div
@@ -79,6 +80,7 @@ exports[`matches product form snapshot: add product 1`] = `
         className="card-title"
       >
         add product
+         Product
       </h3>
     </div>
     <div
