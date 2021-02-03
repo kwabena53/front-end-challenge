@@ -4,7 +4,7 @@ import GlobalStyles from "../../style/Global.module.css";
 const AddProductPage = () => {
   return (
     <div className={GlobalStyles.container}>
-      <ProductForm title="Add Product" />
+      <ProductForm title="Add" />
     </div>
   );
 };

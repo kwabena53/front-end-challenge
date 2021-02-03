@@ -7,7 +7,7 @@ import {
   ADD_PRODUCT,
   ADD_PRODUCT_SUCCESS,
 } from "./actions";
-import { getNextAutoIncrementID } from "../../../utils/helper";
+import { getNextAutoIncrementID, generateID } from "../../../utils/helper";
 
 const INITIAL_STATE = {
   gettingProducts: false,
@@ -15,6 +15,20 @@ const INITIAL_STATE = {
 };
 export default function reducer(state = INITIAL_STATE, action) {
   const { type } = action;
+
+  // Create our new price object
+  const priceId = generateID();
+  const date = new Date().toISOString();
+  const _price = { id: priceId, price: action.price, date: date };
+
+  // Create our new product object
+  const productId = generateID();
+  const product = {
+    id: productId,
+    name: action.productName,
+    prices: [priceId],
+  };
+  //adding products
 
   switch (type) {
     //receiving products
@@ -40,20 +54,6 @@ export default function reducer(state = INITIAL_STATE, action) {
         gettingProducts: null,
       };
 
-      // Create our new price object
-      const priceId = getNextAutoIncrementID(state.entities.price);
-      const date = new Date().toISOString();
-      const _price = { id: priceId, price: action.price, date: date };
-
-      // Create our new product object
-      const productId = getNextAutoIncrementID(state.entities.product);
-      const product = {
-        id: productId,
-        name: action.productName,
-        prices: [priceId],
-      };
-    //adding products
-
     case REQUEST_TO_ADD_PRODUCT:
       return {
         ...state,
@@ -64,16 +64,16 @@ export default function reducer(state = INITIAL_STATE, action) {
         ...state,
         entities: {
           price: {
-            ...state[state.entities.price],
-            [_price]: _price,
+            ...state.entities.price,
+            [priceId]: _price,
           },
           product: {
-            ...state[state.entities.product],
-            [product]: product,
+            ...state.entities.product,
+            [productId]: product,
           },
         },
         result: {
-          product: state[state.result.product].concat(productId),
+          products: state.result.products.concat(productId),
         },
         addingProducts: true,
       };
