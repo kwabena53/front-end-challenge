@@ -7,6 +7,7 @@ import {
   ADD_PRODUCT,
   ADD_PRODUCT_SUCCESS,
   EDIT_PRODUCT,
+  DELETE_PRODUCT,
 } from "./actions";
 import { generateID } from "../../../utils/helper";
 // getNextAutoIncrementID;
@@ -110,6 +111,19 @@ export default function reducer(state = INITIAL_STATE, action) {
         },
         editingProducts: true,
       };
+
+    case DELETE_PRODUCT: {
+      delete state.entities.product[action.productId];
+      console.log("new state: ", state);
+      return {
+        ...state,
+        result: {
+          products: state.result.products.filter(
+            (prodId) => prodId !== action.productId
+          ),
+        },
+      };
+    }
     default:
       return state;
   }

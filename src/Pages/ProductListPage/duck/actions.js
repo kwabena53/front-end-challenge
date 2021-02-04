@@ -12,6 +12,7 @@ export const REQUEST_TO_ADD_PRODUCT = "REQUEST_TO_ADD_PRODUCT";
 export const ADD_PRODUCT = "ADD_PRODUCT";
 export const ADD_PRODUCT_SUCCESS = "ADD_PRODUCT_SUCCESS";
 export const EDIT_PRODUCT = "EDIT_PRODUCT";
+export const DELETE_PRODUCT = "DELETE_PRODUCT";
 
 export const getProducts = () => {
   return async (dispatch) => {
@@ -49,5 +50,12 @@ export const editProduct = (productId, productName, price, priceId) => {
     productName,
     price,
     priceId,
+  };
+};
+
+export const deleteProduct = (productId) => {
+  return {
+    type: DELETE_PRODUCT,
+    productId,
   };
 };

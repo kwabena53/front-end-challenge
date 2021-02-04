@@ -14,9 +14,9 @@ function App() {
   const products = useSelector((state) => state.products);
 
   useEffect(() => {
-    // if (products) {
-    dispatch(getProducts());
-    // }
+    if (products) {
+      dispatch(getProducts());
+    }
   }, []);
 
   return (

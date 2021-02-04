@@ -13,10 +13,10 @@ const ProductForm = ({ title, _product, _price, _productId, _priceId }) => {
   const dispatch = useDispatch();
   let history = useHistory();
 
-  const productName = _product ? _product : undefined;
-  const price = _price ? _price : undefined;
-  const priceId = _priceId ? _priceId : undefined;
-  const productId = _productId ? _productId : undefined;
+  const productName = _product ? _product : "";
+  const price = _price ? _price : "";
+  const priceId = _priceId ? _priceId : "";
+  const productId = _productId ? _productId : "";
   const buttonText = _product ? "save" : "submit";
 
   const [inputText, setInputText] = useState({
