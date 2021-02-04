@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useEffect } from "react";
+import React, { useEffect, useCallback } from "react";
 import AddProductPage from "./Pages/AddProductPage/AddProductPage";
 import ProductListPage from "./Pages/ProductListPage/ProductListPage";
 import EditProductPage from "./Pages/EditProductPage/EditProductPage";
@@ -13,11 +13,15 @@ function App() {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products);
 
+  const initFetch = useCallback(() => {
+    dispatch(getProducts());
+  }, [dispatch]);
+
   useEffect(() => {
-    if (products) {
-      dispatch(getProducts());
+    if (!products) {
+      initFetch();
     }
-  }, []);
+  }, [initFetch, products]);
 
   return (
     <Router>
