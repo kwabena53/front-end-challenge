@@ -12,7 +12,7 @@ You’ll need to have Node >= 8.10 on your local development machine (but it’s
 Locate the path of the project and install the dependencies with the command below
 
 ```
-git clone https://github.com/kwabena53/mpharma-test.git
+git clone https://github.com/kwabena53/front-end-challenge.git
 npm install or yarn install
 ```
 
