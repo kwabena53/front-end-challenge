@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Product from "../../Components/Product/Product";
 import { Grid } from "tabler-react";
 import GlobalStyles from "../../style/Global.module.css";
@@ -12,7 +12,7 @@ const ProductListPage = () => {
       (a, b) => price[b].date - price[a].date
     );
 
-    return price[sortedPriceIDList[0]].price;
+    return price[sortedPriceIDList[0]];
   };
   return (
     <>
@@ -27,11 +27,7 @@ const ProductListPage = () => {
                 products.entities.price
               );
               return (
-                <Product
-                  key={prod.id}
-                  name={prod.name}
-                  latestPrice={latPrice}
-                />
+                <Product key={prod.id} product={prod} latestPrice={latPrice} />
               );
             })}
           </Grid.Row>

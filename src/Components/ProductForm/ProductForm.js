@@ -1,18 +1,22 @@
 import React, { useState } from "react";
-import { addProduct } from "../../Pages/AddProductPage/duck/actions";
+import {
+  addProduct,
+  editProduct,
+} from "../../Pages/ProductListPage/duck/actions";
 
 import "tabler-react/dist/Tabler.css";
 import { Grid, Form, Card, Button } from "tabler-react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 
-const ProductForm = ({ title, _productName, _price }) => {
+const ProductForm = ({ title, _product, _price, _productId }) => {
   const dispatch = useDispatch();
   let history = useHistory();
 
-  const productName = _productName ? _productName : undefined;
+  const productName = _product ? _product : undefined;
   const price = _price ? _price : undefined;
-  const buttonText = _productName ? "save" : "submit";
+  const productId = _productId ? _productId : undefined;
+  const buttonText = _product ? "save" : "submit";
 
   const [inputText, setInputText] = useState({
     prodName: productName,
@@ -31,8 +35,9 @@ const ProductForm = ({ title, _productName, _price }) => {
     e.preventDefault();
     if (title === "Add") {
       dispatch(addProduct(inputText.prodName, inputText.prodPrice));
+    } else if (title === "Edit") {
+      dispatch(editProduct(productId, inputText.prodName, inputText.prodPrice));
     }
-
     history.push("/");
   };
   return (

@@ -17,7 +17,7 @@ function App() {
     if (products) {
       dispatch(getProducts());
     }
-  }, []);
+  }, [products, dispatch]);
 
   return (
     <Router>

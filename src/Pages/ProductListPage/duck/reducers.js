@@ -6,12 +6,15 @@ import {
   REQUEST_TO_ADD_PRODUCT,
   ADD_PRODUCT,
   ADD_PRODUCT_SUCCESS,
+  EDIT_PRODUCT,
 } from "./actions";
-import { getNextAutoIncrementID, generateID } from "../../../utils/helper";
+import { generateID } from "../../../utils/helper";
+// getNextAutoIncrementID;
 
 const INITIAL_STATE = {
   gettingProducts: false,
   addingProducts: false,
+  editingProducts: false,
 };
 export default function reducer(state = INITIAL_STATE, action) {
   const { type } = action;
@@ -28,6 +31,7 @@ export default function reducer(state = INITIAL_STATE, action) {
     name: action.productName,
     prices: [priceId],
   };
+
   //adding products
 
   switch (type) {
@@ -81,6 +85,30 @@ export default function reducer(state = INITIAL_STATE, action) {
       return {
         ...state,
         addingProducts: false,
+      };
+
+    //edit product
+    case EDIT_PRODUCT:
+      return {
+        ...state,
+        entities: {
+          price: {
+            ...state.entities.price,
+            [action.productId]: {
+              id: action.productId,
+              price: action.price,
+              date: date,
+            },
+          },
+          product: {
+            ...state.entities.product,
+            [action.productId]: {
+              ...state.entities.product[action.productId],
+              name: action.productName,
+            },
+          },
+        },
+        editingProducts: true,
       };
     default:
       return state;

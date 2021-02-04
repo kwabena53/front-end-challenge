@@ -8,6 +8,7 @@ export const GET_PRODUCTS_ERROR = "GET_PRODUCTS_ERROR";
 export const REQUEST_TO_ADD_PRODUCT = "REQUEST_TO_ADD_PRODUCT";
 export const ADD_PRODUCT = "ADD_PRODUCT";
 export const ADD_PRODUCT_SUCCESS = "ADD_PRODUCT_SUCCESS";
+export const EDIT_PRODUCT = "EDIT_PRODUCT";
 
 export const getProducts = () => {
   return async (dispatch) => {
@@ -29,6 +30,15 @@ export const getProducts = () => {
 export const addProduct = (productName, price) => {
   return {
     type: ADD_PRODUCT,
+    productName,
+    price,
+  };
+};
+
+export const editProduct = (productId, productName, price) => {
+  return {
+    type: EDIT_PRODUCT,
+    productId,
     productName,
     price,
   };
