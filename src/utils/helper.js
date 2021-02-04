@@ -22,3 +22,22 @@ export const getNextAutoIncrementID = (object) => {
   const lastId = arr[arr.length - 1];
   return parseInt(lastId) + 1;
 };
+
+export const dataWithLatestDate = (data) => {
+  const products = data.entities.product;
+  const prices = data.entities.price;
+
+  for (const product in products) {
+    products[product].prices.sort(
+      (a, b) => new Date(prices[a].date) - new Date(prices[b].date)
+    );
+  }
+
+  return {
+    ...data,
+    entities: {
+      ...data.entities,
+      product: products,
+    },
+  };
+};

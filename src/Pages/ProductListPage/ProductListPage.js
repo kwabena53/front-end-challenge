@@ -9,7 +9,7 @@ const ProductListPage = () => {
 
   const getLatestPrice = (prodPrices, price) => {
     const sortedPriceIDList = prodPrices.sort(
-      (a, b) => price[b].date - price[a].date
+      (a, b) => new Date(price[b].date) - new Date(price[a].date)
     );
 
     return price[sortedPriceIDList[0]];

@@ -9,12 +9,13 @@ import { Grid, Form, Card, Button } from "tabler-react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 
-const ProductForm = ({ title, _product, _price, _productId }) => {
+const ProductForm = ({ title, _product, _price, _productId, _priceId }) => {
   const dispatch = useDispatch();
   let history = useHistory();
 
   const productName = _product ? _product : undefined;
   const price = _price ? _price : undefined;
+  const priceId = _priceId ? _priceId : undefined;
   const productId = _productId ? _productId : undefined;
   const buttonText = _product ? "save" : "submit";
 
@@ -36,7 +37,9 @@ const ProductForm = ({ title, _product, _price, _productId }) => {
     if (title === "Add") {
       dispatch(addProduct(inputText.prodName, inputText.prodPrice));
     } else if (title === "Edit") {
-      dispatch(editProduct(productId, inputText.prodName, inputText.prodPrice));
+      dispatch(
+        editProduct(productId, inputText.prodName, inputText.prodPrice, priceId)
+      );
     }
     history.push("/");
   };

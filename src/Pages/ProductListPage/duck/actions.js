@@ -1,4 +1,7 @@
-import { normalizeProductsData } from "../../../utils/helper";
+import {
+  normalizeProductsData,
+  dataWithLatestDate,
+} from "../../../utils/helper";
 import { PRODUCT_LIST_API } from "../../../utils/constants";
 import axios from "axios";
 export const RECEIVE_PRODUCTS = "RECEIVE_PRODUCTS";
@@ -15,6 +18,10 @@ export const getProducts = () => {
     dispatch({ type: GET_PRODUCTS_REQUEST });
     try {
       const { data } = await axios.get(PRODUCT_LIST_API);
+      const normalizedData = normalizeProductsData(data);
+      const dateSortedData = dataWithLatestDate(normalizedData);
+      console.log("normalized: ", normalizedData);
+      console.log("dateSorted: ", dateSortedData);
       const products = normalizeProductsData(data);
       dispatch({
         type: RECEIVE_PRODUCTS,
@@ -35,11 +42,12 @@ export const addProduct = (productName, price) => {
   };
 };
 
-export const editProduct = (productId, productName, price) => {
+export const editProduct = (productId, productName, price, priceId) => {
   return {
     type: EDIT_PRODUCT,
     productId,
     productName,
     price,
+    priceId,
   };
 };

@@ -94,8 +94,8 @@ export default function reducer(state = INITIAL_STATE, action) {
         entities: {
           price: {
             ...state.entities.price,
-            [action.productId]: {
-              id: action.productId,
+            [action.priceId]: {
+              id: action.priceId,
               price: action.price,
               date: date,
             },

@@ -14,10 +14,10 @@ function App() {
   const products = useSelector((state) => state.products);
 
   useEffect(() => {
-    if (products) {
-      dispatch(getProducts());
-    }
-  }, [products, dispatch]);
+    // if (products) {
+    dispatch(getProducts());
+    // }
+  }, []);
 
   return (
     <Router>
