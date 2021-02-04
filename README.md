@@ -8,7 +8,7 @@ prices.
 ## Have a feel of the app online
 
 The app has been hosted on Netlify. Access with the link below.
-https://reactreadsapp.netlify.com/
+https://myproducthistory.netlify.app
 
 ## How to run the Program on Your Computer
 

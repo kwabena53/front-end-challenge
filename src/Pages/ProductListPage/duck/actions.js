@@ -19,10 +19,6 @@ export const getProducts = () => {
     dispatch({ type: GET_PRODUCTS_REQUEST });
     try {
       const { data } = await axios.get(PRODUCT_LIST_API);
-      const normalizedData = normalizeProductsData(data);
-      const dateSortedData = dataWithLatestDate(normalizedData);
-      console.log("normalized: ", normalizedData);
-      console.log("dateSorted: ", dateSortedData);
       const products = normalizeProductsData(data);
       dispatch({
         type: RECEIVE_PRODUCTS,
