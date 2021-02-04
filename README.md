@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# PRODUCT PRICE HISTORY APP
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Objective
 
-## Available Scripts
+This is this a simple complete react App that manageS a list of products and their historical. It uses Redux for state managment, React-Router for routing, Normalizr for normalizing data in redux store, redux-persist to persist data in store and Jest and React Testing Library for testing
+prices.
 
-In the project directory, you can run:
+## Have a feel of the app online
 
-### `yarn start`
+The app has been hosted on Netlify. Access with the link below.
+https://reactreadsapp.netlify.com/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## How to run the Program on Your Computer
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+You’ll need to have Node >= 8.10 on your local development machine (but it’s not required on the server). You can use [nvm](https://github.com/creationix/nvm#installation) (macOS/Linux) or [nvm-windows](https://github.com/coreybutler/nvm-windows#node-version-manager-nvm-for-windows) to switch Node versions between different projects.
 
-### `yarn test`
+Locate the path of the project and install the dependencies with the command below
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+git clone https://github.com/kwabena53/mpharma-test.git
+npm install or yarn install
+```
 
-### `yarn build`
+Run the following command to start the app on your local service http://localhost:3000/
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+npm start or yarn start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Functionalities of the App
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The application allows users to
 
-### `yarn eject`
+- [`Display List of Products`](#Display Product List) Showing name and latest price of product
+- [`Edit Product Details`](#Edit Product Details)
+- [`Delete Product`](#Delete Product)
+- [`Add a new Product`](#Add a new Product)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### `Display Product List`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The hom page of the app shows a display of all the products. This list is coming from an external API and it is stored in the redux store and
+persisted. Each products displays the name, latest price and 2 icons. One icon is a delete icon and the other is an edit icon
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![Display Products](src/screenshots/view-screen.png "Display products")
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### `Edit Product`
 
-## Learn More
+This screen allows you to edit the details of a particular product you have selected. When the edit icon is clicked, it leads the user to a new page. This page allows the user to edit the details of the product. You can change the name and the price of the product.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![Edit Product Details](src/screenshots/edit-product.png "Edit Product")
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### `Delete Product`
 
-### Code Splitting
+A user can delete a product by simply clicking on the delete icon on that product. This imediately deletes the item.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### `Add a new Product`
 
-### Analyzing the Bundle Size
+You can easily add a new product by selecting "Add Product" on the menu navigation. A new page shows where the user can add a product by specifying the name and the price of that item
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Add Product](src/screenshots/add-product.png "Add Product")
