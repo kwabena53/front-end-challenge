@@ -5,11 +5,6 @@
 This is this a simple complete react App that manageS a list of products and their historical. It uses Redux for state managment, React-Router for routing, Normalizr for normalizing data in redux store, redux-persist to persist data in store and Jest and React Testing Library for testing
 prices.
 
-## Have a feel of the app online
-
-The app has been hosted on Netlify. Access with the link below.
-https://myproducthistory.netlify.app
-
 ## How to run the Program on Your Computer
 
 You’ll need to have Node >= 8.10 on your local development machine (but it’s not required on the server). You can use [nvm](https://github.com/creationix/nvm#installation) (macOS/Linux) or [nvm-windows](https://github.com/coreybutler/nvm-windows#node-version-manager-nvm-for-windows) to switch Node versions between different projects.
