@@ -6,7 +6,7 @@ import EditProductPage from "./Pages/EditProductPage/EditProductPage";
 import Menu from "./Components/Menu/Menu";
 import GlobalStyles from "./style/Global.module.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import { getProducts } from "./Pages/ProductListPage/duck/actions";
+import { getProducts } from "./Pages/duck/actions";
 import { useSelector, useDispatch } from "react-redux";
 
 function App() {

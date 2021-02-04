@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-import {
-  addProduct,
-  editProduct,
-} from "../../Pages/ProductListPage/duck/actions";
+import { addProduct, editProduct } from "../../Pages/duck/actions";
 
 import "tabler-react/dist/Tabler.css";
 import { Grid, Form, Card, Button } from "tabler-react";

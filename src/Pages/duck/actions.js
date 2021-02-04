@@ -1,8 +1,5 @@
-import {
-  normalizeProductsData,
-  dataWithLatestDate,
-} from "../../../utils/helper";
-import { PRODUCT_LIST_API } from "../../../utils/constants";
+import { normalizeProductsData } from "../../utils/helper";
+import { PRODUCT_LIST_API } from "../../utils/constants";
 import axios from "axios";
 export const RECEIVE_PRODUCTS = "RECEIVE_PRODUCTS";
 export const GET_PRODUCTS_REQUEST = "GET_PRODUCTS_REQUEST";

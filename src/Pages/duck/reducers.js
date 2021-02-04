@@ -9,7 +9,7 @@ import {
   EDIT_PRODUCT,
   DELETE_PRODUCT,
 } from "./actions";
-import { generateID } from "../../../utils/helper";
+import { generateID } from "../../utils/helper";
 // getNextAutoIncrementID;
 
 const INITIAL_STATE = {

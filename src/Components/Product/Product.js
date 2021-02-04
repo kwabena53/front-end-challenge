@@ -3,7 +3,7 @@ import styles from "./Product.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPills, faEdit, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { Link, useHistory } from "react-router-dom";
-import { deleteProduct } from "../../Pages/ProductListPage/duck/actions";
+import { deleteProduct } from "../../Pages/duck/actions";
 import { useDispatch } from "react-redux";
 
 const Product = ({ product, latestPrice }) => {
