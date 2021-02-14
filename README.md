@@ -2,8 +2,10 @@
 
 ## Project Objective
 
-This is this a simple complete react App that manageS a list of products and their historical. It uses Redux for state managment, React-Router for routing, Normalizr for normalizing data in redux store, redux-persist to persist data in store and Jest and React Testing Library for testing
-prices.
+This is a simple complete react App that manages a list of products and their historical prices. It uses Redux for state managment, React-Router for routing, Normalizr for normalizing data in redux store, redux-persist to persist data in store and Jest and React Testing Library for testing.
+
+## Have a feel online
+You can test the online version hosted on [Netlify](https://myproducthistory.netlify.app/)
 
 ## How to run the Program on Your Computer
 
