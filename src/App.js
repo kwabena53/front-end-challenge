@@ -18,6 +18,7 @@ function App() {
   }, [dispatch]);
 
   useEffect(() => {
+    console.log("products", products)
     if (products===undefined) {
       initFetch();
     }
