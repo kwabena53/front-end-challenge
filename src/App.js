@@ -18,7 +18,7 @@ function App() {
   }, [dispatch]);
 
   useEffect(() => {
-    if (!products) {
+    if (products===undefined) {
       initFetch();
     }
   }, [initFetch, products]);
