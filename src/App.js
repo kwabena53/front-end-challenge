@@ -11,14 +11,13 @@ import { useSelector, useDispatch } from "react-redux";
 
 function App() {
   const dispatch = useDispatch();
-  const products = useSelector((state) => state.products);
+  const products = useSelector((state) => state.products.entities);
 
   const initFetch = useCallback(() => {
     dispatch(getProducts());
   }, [dispatch]);
 
   useEffect(() => {
-    console.log("products", products)
     if (products===undefined) {
       initFetch();
     }
